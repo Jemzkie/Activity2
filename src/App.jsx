@@ -1,13 +1,13 @@
 import Header from "./Header.jsx"
 import Footer from "./Footer.jsx"
-import Card from "./Card.jsx"
+import Body from "./Body.jsx"
 
 function App() {
   
   return(
     <>
             <Header/>
-            <Card/>
+            <Body/>
             <Footer/>
     </>
   );

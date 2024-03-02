@@ -1,37 +1,23 @@
-import profilePic from './assets/Shrek.jpg'
+import List from "./List";
 
 function Card() {
-    return(
-        <>
-        <div className="spcont"> 
-        </div>
+  const students = List();
+
+  return (
+    <>
+      {students.map((student) => (
         <div className="card">
-            <img className="image" src={profilePic} alt="profile picture"></img>
-            <h2 className="card-title">Shrek</h2>
-            <p>shrek@gmail.com</p>
+          <div key={student.id}>
+            <img className="img" src={student.profile} alt={student.name} />
+            <p className="card-title">
+              {student.name}
+            </p>
+            <p className="card-text">{student.email}</p>
+          </div>
         </div>
-        <div className="card">
-            <img className="image" src={profilePic} alt="profile picture"></img>
-            <h2 className="card-title">Shrek</h2>
-            <p>shrek@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic} alt="profile picture"></img>
-            <h2 className="card-title">Shrek</h2>
-            <p>shrek@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic} alt="profile picture"></img>
-            <h2 className="card-title">Shrek</h2>
-            <p>shrek@gmail.com</p>
-        </div>
-        <div className="card">
-            <img className="image" src={profilePic} alt="profile picture"></img>
-            <h2 className="card-title">Shrek</h2>
-            <p>shrek@gmail.com</p>
-        </div>
-        </>
-    );
+      ))}
+    </>
+  );
 }
 
 export default Card
